@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* ---------------
+Typography 
+------------------*/
+
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: .75rem;
+    margin: 0;
+}
+
+/* ---------------
+Layout 
+------------------*/
+
+.container {
+    
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+header {
+    
+    background: cornflowerblue;
+    padding: 2em 0;
+}
+
+@media (max-width: 550px) {
+    .container-flex {
+        flex-direction: column;
+    }
+    header {
+        text-align: center;
+    }
+}
+
+/* Navigation */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav li {
+    margin-left: 2em;
+    
+}
+
+nav a {
+    text-decoration: none;  
+    font-weight: 700;
+    color: cornsilk;
+    padding: .25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color: magenta;
+}
+
+.current-page {
+    border-bottom: .1px solid cornsilk;
+}
+
+.current-page:hover {
+    color: cornsilk;
+}
+
+@media (max-width: 550px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: .5em 0;
+    }
+}
