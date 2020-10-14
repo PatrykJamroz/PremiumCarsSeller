@@ -1,23 +1,61 @@
 body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
+  background-color: 000000;
 }
 
 /* ---------------
 Typography 
 ------------------*/
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lora", serif;
-  font-size: 2rem;
   font-weight: 400;
+  color: #231f20;
+  margin-top: 0;
+}
+
+a {
+  color: #231f20;
+}
+
+.site-title {
+  text-align: center;
   margin: 0;
 }
 
-.subtitle {
-  font-weight: 700;
-  font-size: 0.75rem;
+.site-title h1 {
+  font-family: "Lora", serif;
+  color: #8e793e;
+  font-weight: 500;
+  font-size: 2rem;
   margin: 0;
+}
+
+.site-title p {
+  font-family: "Lora", serif;
+  color: #8e793e;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.about h2 {
+  font-family: "Lora", serif;
+  border-bottom: 1px solid #8e793e;
+  font-weight: 400;
+  color: #8e793e;
+}
+
+.about-side p {
+  font-family: "Lora", serif;
+  font-weight: 400;
 }
 
 /* ---------------
@@ -37,53 +75,37 @@ Layout
 }
 
 header {
-  background: cornflowerblue;
-  padding: 2em 0;
+  background: #eaeaea;
+  padding: 1.5em 0;
   max-width: 900px;
   margin: 0 auto;
   width: 90%;
 }
 
-@media (max-width: 550px) {
-  .container-flex {
-    flex-direction: column;
-  }
-  header {
-    text-align: center;
-  }
+.about {
+  background-color: #eaeaea;
+  padding: 1rem 0 1rem 0;
 }
 
-/* Navigation */
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+.about-side {
+  color: #8e793e;
 }
 
-nav li {
-  margin-left: 2em;
+.about-main {
+  width: 70%;
+  /*border: 1px solid green;*/
+  padding: 0 1rem;
 }
 
-nav a {
-  text-decoration: none;
-  font-weight: 700;
-  color: cornsilk;
-  padding: 0.25em 0;
+.about-side {
+  width: 30%;
+  /*border: 1px solid red;*/
+  text-align: center;
+  vertical-align: middle;
 }
 
-nav a:hover,
-nav a:focus {
-  color: magenta;
-}
-
-.current-page {
-  border-bottom: 0.1px solid cornsilk;
-}
-
-.current-page:hover {
-  color: cornsilk;
+.fa {
+  vertical-align: middle;
 }
 
 .carousel-item {
@@ -110,25 +132,49 @@ nav a:focus {
   height: 400px;
 }
 
-.about-main {
-  width: 70%;
-  /*border: 1px solid green;*/
-  margin-left: 0;
-  padding: 0 1rem;
+@media (max-width: 590px) {
+  .container-flex {
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+  }
 }
 
-.about-side {
-  width: 30%;
-  /*border: 1px solid red;*/
-  text-align: center;
-  vertical-align: middle;
+/* Navigation */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-.fa {
-  vertical-align: middle;
+nav li {
+  margin-left: 1.5em;
 }
 
-@media (max-width: 550px) {
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #231f20;
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ad974f;
+}
+
+.current-page {
+  border-bottom: 0.5px solid #ad974f;
+}
+
+.current-page:hover {
+  color: #ad974f;
+}
+
+@media (max-width: 590px) {
   nav ul {
     flex-direction: column;
   }
