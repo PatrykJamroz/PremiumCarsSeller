@@ -1,23 +1,91 @@
 body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
+  background-color: 000000;
+  color: #231f20;
 }
 
 /* ---------------
 Typography 
 ------------------*/
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lora", serif;
-  font-size: 2rem;
   font-weight: 400;
+  color: #231f20;
+  margin-top: 0;
+}
+
+a {
+  color: #231f20;
+}
+
+.site-title {
+  text-align: center;
   margin: 0;
 }
 
-.subtitle {
-  font-weight: 700;
-  font-size: 0.75rem;
+.site-title h1 {
+  font-family: "Lora", serif;
+  color: #8e793e;
+  font-weight: 500;
+  font-size: 2rem;
   margin: 0;
+}
+
+.site-title p {
+  font-family: "Lora", serif;
+  color: #8e793e;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.about h2 {
+  font-family: "Lora", serif;
+  border-bottom: 1px solid #8e793e;
+  font-weight: 400;
+  color: #8e793e;
+}
+
+.about-side p {
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+
+.contact h2 {
+  font-family: "Lora", serif;
+  border-bottom: 1px solid #8e793e;
+  font-weight: 400;
+  color: #8e793e;
+  margin: 0 1rem;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact a {
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.25em 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.15rem;
+}
+
+.contact a:hover,
+.contat a:focus {
+  color: #ad974f;
+}
+
+footer p {
+  font-size: 0.75rem;
 }
 
 /* ---------------
@@ -37,53 +105,49 @@ Layout
 }
 
 header {
-  background: cornflowerblue;
-  padding: 2em 0;
+  background: #eaeaea;
+  padding: 1.5em 0;
   max-width: 900px;
   margin: 0 auto;
   width: 90%;
 }
 
-@media (max-width: 550px) {
-  .container-flex {
-    flex-direction: column;
-  }
-  header {
-    text-align: center;
-  }
+.about {
+  background-color: #eaeaea;
+  padding: 1rem 0 1rem 0;
 }
 
-/* Navigation */
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+.about-side {
+  color: #8e793e;
 }
 
-nav li {
-  margin-left: 2em;
+.about-main {
+  width: 70%;
+  /*border: 1px solid green;*/
+  padding: 0 1rem;
 }
 
-nav a {
-  text-decoration: none;
-  font-weight: 700;
-  color: cornsilk;
-  padding: 0.25em 0;
+.about-side {
+  width: 30%;
+  /*border: 1px solid red;*/
+  text-align: center;
+  vertical-align: middle;
 }
 
-nav a:hover,
-nav a:focus {
-  color: magenta;
+.fa {
+  vertical-align: middle;
 }
 
-.current-page {
-  border-bottom: 0.1px solid cornsilk;
+.contact {
+  background-color: #eaeaea;
 }
 
-.current-page:hover {
-  color: cornsilk;
+.contact-details {
+  padding: 1rem;
+}
+
+.contact .map {
+  margin-bottom: 0;
 }
 
 .carousel-item {
@@ -110,27 +174,67 @@ nav a:focus {
   height: 400px;
 }
 
-.about-main {
-  width: 70%;
-  /*border: 1px solid green;*/
-  margin-left: 0;
-  padding: 0 1rem;
-}
-
-.about-side {
-  width: 30%;
-  /*border: 1px solid red;*/
+footer {
+  background-color: #eaeaea;
+  /*border: 5px solid yellow;*/
+  padding: 0.25rem 0;
   text-align: center;
-  vertical-align: middle;
 }
 
-.fa {
-  vertical-align: middle;
+@media (max-width: 590px) {
+  .container-flex {
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+  }
 }
 
-@media (max-width: 550px) {
+.map iframe {
+  max-width: 900px;
+  height: 350px;
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Navigation */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-left: 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #231f20;
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ad974f;
+}
+
+.current-page {
+  border-bottom: 0.5px solid #ad974f;
+}
+
+.current-page:hover {
+  color: #ad974f;
+}
+
+@media (max-width: 590px) {
   nav ul {
     flex-direction: column;
+    margin: 0;
   }
   nav li {
     margin: 0.5em 0;
@@ -141,13 +245,19 @@ nav a:focus {
   }
 
   .about-main {
-    margin: 0 auto;
-    width: 100%;
+    width: 90%;
     text-align: center;
+    margin: 0;
   }
   .about-side {
     margin: 0 auto;
     width: 100%;
+    text-align: center;
+  }
+
+  .contact {
+    margin: 0 auto;
+    width: 90%;
     text-align: center;
   }
 }
