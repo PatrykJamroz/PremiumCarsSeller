@@ -76,7 +76,7 @@ a {
   font-weight: 700;
   padding: 0.25em 0;
   font-family: "Ubuntu", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .contact a:hover,
@@ -234,6 +234,7 @@ nav a:focus {
 @media (max-width: 590px) {
   nav ul {
     flex-direction: column;
+    margin: 0;
   }
   nav li {
     margin: 0.5em 0;
@@ -244,9 +245,9 @@ nav a:focus {
   }
 
   .about-main {
-    margin: 0 auto;
-    width: 100%;
+    width: 90%;
     text-align: center;
+    margin: 0;
   }
   .about-side {
     margin: 0 auto;
@@ -256,7 +257,7 @@ nav a:focus {
 
   .contact {
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     text-align: center;
   }
 }
